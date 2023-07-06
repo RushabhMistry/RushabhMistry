@@ -65,10 +65,6 @@
   <body>
     <!-- ========== Hit Counter ========== -->
 
-    <div class="website-counter">
-      <span>Website Hits:</span>
-      <span id="hit-count"></span>
-    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       var hitCount = 0;
@@ -79,6 +75,10 @@
       $(document).on("page:load", function () {
         localStorage.setItem("hitCount", hitCount + 1);
         $("#hit-count").text(hitCount + 1);
+      });
+      $(document).on("click", "#reset-counter", function () {
+        localStorage.removeItem("hitCount");
+        $("#hit-count").text(0);
       });
     </script>
     <!-- ======= Header ======= -->
