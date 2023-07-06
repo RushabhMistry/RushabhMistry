@@ -47,7 +47,37 @@
   ======================================================== -->
   </head>
 
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-5PG06Y17D2"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5PG06Y17D2");
+  </script>
+
   <body>
+    <!-- ========== Hit Counter ========== -->
+
+    <div class="website-counter">
+      <span>Website Hits:</span>
+      <span id="hit-count"></span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      var hitCount = 0;
+      $(document).ready(function () {
+        hitCount++;
+        $("#hit-count").text(hitCount);
+      });
+    </script>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top header-transparent">
       <div
@@ -546,6 +576,7 @@
         <div class="credits"></div>
       </div>
     </footer>
+    <!-- <div class="dummyyy"></div> -->
     <!-- End Footer -->
 
     <a

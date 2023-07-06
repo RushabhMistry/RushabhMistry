@@ -9,6 +9,20 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/* .dummyyy{
+  width: 98.9vw;
+  height: 100px;
+  background-color: #263f49;
+  position: absolute; 
+  display: block;
+  text-align: center;
+  align-items: center;
+  font-size: 40px;
+  color: #fff;
+  border: 5px solid red; 
+} */
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
