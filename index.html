@@ -73,12 +73,12 @@
     <script>
       var hitCount = 0;
       $(document).ready(function () {
-        hitCount++;
+        hitCount = localStorage.getItem("hitCount") || 0;
         $("#hit-count").text(hitCount);
       });
       $(document).on("page:load", function () {
-        hitCount++;
-        $("#hit-count").text(hitCount);
+        localStorage.setItem("hitCount", hitCount + 1);
+        $("#hit-count").text(hitCount + 1);
       });
     </script>
     <!-- ======= Header ======= -->
