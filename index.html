@@ -68,21 +68,13 @@
       <span>Website Hits:</span>
       <span id="hit-count"></span>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       var hitCount = 0;
-      $(document).ready(function () {
-        hitCount = localStorage.getItem("hitCount") || 0;
-        $("#hit-count").text(hitCount);
-      });
-      $(document).on("page:load", function () {
-        localStorage.setItem("hitCount", hitCount + 1);
-        $("#hit-count").text(hitCount + 1);
-      });
-      $(document).on("click", "#reset-counter", function () {
-        localStorage.removeItem("hitCount");
-        $("#hit-count").text(0);
-      });
+      function incrementHitCount() {
+        hitCount++;
+        document.getElementById("hit-count").textContent = hitCount;
+      }
+      window.addEventListener("load", incrementHitCount);
     </script>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top header-transparent">
