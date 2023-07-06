@@ -72,8 +72,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      var hitCount = 0;
       $(document).ready(function () {
+        hitCount++;
+        $("#hit-count").text(hitCount);
+      });
+      $(document).on("page:load", function () {
         hitCount++;
         $("#hit-count").text(hitCount);
       });
