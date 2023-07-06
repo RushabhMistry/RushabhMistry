@@ -6,6 +6,24 @@
  * License: https://bootstrapmade.com/license/
  */
 
+// HIT COUNTER
+$(document).ready(function () {
+  // Get the hit count from local storage or initialize it to 0
+  let hitCount = localStorage.getItem("hitCount") || 0;
+
+  // Display the hit count on the page
+  $("#hitCount").text(hitCount);
+
+  // Increment the hit count
+  hitCount++;
+  $("#hitCount").text(hitCount);
+
+  // Store the updated hit count in local storage
+  localStorage.setItem("hitCount", hitCount);
+});
+
+// HIT COUNTER
+
 (function () {
   "use strict";
 
